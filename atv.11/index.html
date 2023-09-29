@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contas Bancárias</title>
+   
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        div {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerenciador de Contas Bancárias</h1>
+    
+    <div>
+        <h2>Inserir Conta</h2>
+        <label for="agencia">Agência:</label>
+        <input type="text" id="agencia">
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero">
+
+        <label for="tipo">Tipo de Conta:</label>
+        <select id="tipo">
+            <option value="corrente">Conta Corrente</option>
+            <option value="poupanca">Conta Poupança</option>
+            <option value="universitaria">Conta Universitária</option>
+        </select>
+
+        <label for="saldo">Saldo:</label>
+        <input type="text" id="saldo">
+
+        <button onclick="inserirConta()">Inserir</button>
+    </div>
+
+    <div>
+        <h2>Deletar Conta</h2>
+        <select id="contas">
+            <!-- Lista de contas será exibida aqui -->
+        </select>
+        <button onclick="deletarConta()">Deletar</button>
+    </div>
+
+    <div>
+        <h2>Visualizar Contas</h2>
+        <button onclick="visualizarContas()">Visualizar</button>
+        <ul id="lista-contas">
+            <!-- Lista de contas será exibida aqui -->
+        </ul>
+    </div>
+
+    <script src="contas.js"></script>
+    <script src="gerenciador.js"></script>
+    
+</body>
+</html>
