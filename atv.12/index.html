@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contas Bancárias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Gerenciador de Contas Bancárias</h1>
+        </div>
+
+        <div class="content">
+            <div class="left-panel">
+                <h2>Inserir Conta</h2>
+                <form id="formInserirConta">
+                    <label for="agencia">Agência:</label>
+                    <input type="text" id="agencia">
+
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero">
+
+                    <label for="tipo">Tipo de Conta:</label>
+                    <select id="tipo">
+                        <option value="corrente">Conta Corrente</option>
+                        <option value="poupanca">Conta Poupança</option>
+                        <option value="universitaria">Conta Universitária</option>
+                    </select>
+
+                    <label for="saldo">Saldo:</label>
+                    <input type="text" id="saldo">
+
+                    <button type="button" onclick="inserirConta()">Inserir</button>
+                </form>
+
+                <h2>Visualizar Contas</h2>
+                <button type="button" onclick="visualizarContas()">Visualizar</button>
+                <ul id="lista-contas">
+                    <!-- Lista de contas será exibida aqui -->
+                </ul>
+            </div>
+
+            <div class="right-panel">
+                <h2>Extrato / Saldo</h2>
+                <button type="button" onclick="visualizarExtrato()">Visualizar Extrato</button>
+                <ul id="extrato">
+                    <!-- Extrato será exibido aqui -->
+                </ul>
+                <div id="saldo-container">
+                    <h3>Saldo Atual:</h3>
+                    <p id="saldo-atual">R$ 0,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Gerenciador de Contas Bancárias</p>
+    </div>
+
+    <script src="contas.js"></script>
+    <script src="gerenciador.js"></script>
+</body>
+
+</html>
+
+
+
